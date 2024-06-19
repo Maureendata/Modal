@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>modal</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+            }
+            .container{
+                width:100%;
+                height:100vh;
+                background:linear-gradient(rgb(235, 114, 114),blue);
+                display:flex;
+                align-items:center;
+                justify-content: center;
+            }
+            .btn{
+                padding:10px 60px;
+                background:#fff;
+                border:0;
+                outline:none;
+                font-size:20px;
+                font-weight:bolder;
+                border-radius: 3rem;
+            }
+            .popup{
+                width:300px;
+                border-radius:4px;
+                top:0%;
+                left:50%;
+                position:absolute;
+                transform: translate(-50%,-50%)scale(0.1);
+                background:#fff;
+                padding:4px,30px,0px;               
+                text-align:center;
+                color:#333;
+                visibility:hidden;
+            } 
+            .popup img{
+                margin:5px 10px;
+                border-radius:50%;
+                box-shadow:3px 5px 8px red;
+            }
+            .popup h2{
+                font-size:20px;
+                font-weight:bolder;
+                margin:10px 0px 10px;
+            }
+            .popup button{
+                background-color:rgb(15, 225, 15);
+                border-radius:4px;
+                width:80%;
+                outline:none;
+                font-size:20px;
+                font-family:'Times New Roman', Times, serif;
+                padding:5px;
+                margin:5px 8px;
+                color:white;
+                box-shadow:2px 2px 10px blue;
+                transition:transform 0.4s,top 0.4s;
+
+            }
+            .open-popup{
+                visibility:visible;
+                top:50%;
+                transform: translate(-50%,-50%)scale(1.0);
+            }
+        </style>
+    </head>
+    <body>
+<div class="container">
+    <button type="submit" class="btn" onclick="openpopup()">Submit</button>
+    <div class="popup" id="popup">
+        <img src="image-4.png" width="200px" height="150px"/>
+        <h2>June</h2>
+        <p>This is the month of recollection</p>
+        <button type="button" onclick="closepopup()">Ok</button>
+    </div>
+</div>
+<script>
+    let popup=document.getElementById('popup');
+    // console.log(popup.textContent);
+    function openpopup(){
+        let sm=popup.classList.add("open-popup");
+        // console.log(sm.textContent);
+    }
+    function closepopup(){
+        popup.classList.remove("open-popup");
+    }
+</script>
+    </body>
+</html>
