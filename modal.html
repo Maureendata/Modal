@@ -30,7 +30,7 @@
             .popup{
                 width:300px;
                 border-radius:4px;
-                top:0%;
+                top:0;
                 left:50%;
                 position:absolute;
                 transform: translate(-50%,-50%)scale(0.1);
@@ -39,6 +39,7 @@
                 text-align:center;
                 color:#333;
                 visibility:hidden;
+                transition:transform 0.4s,top 0.4s;
             } 
             .popup img{
                 margin:5px 10px;
